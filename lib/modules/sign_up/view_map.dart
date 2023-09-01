@@ -29,14 +29,12 @@ class _MapViewState extends State<MapView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Get.find<SignUpLogic>().controller = Completer();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 

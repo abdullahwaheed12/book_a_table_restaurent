@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,7 +24,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     logic.currentProduct(
         widget.productModel, widget.isProduct! ? 'products' : 'biteBags');
@@ -73,7 +71,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         height: 220,
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
+                            borderRadius: BorderRadius.circular(20)),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.network(
@@ -220,7 +218,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               Expanded(
                 child: InkWell(
                   onTap: () {
-                    if (widget.isProduct ??  false) {
+                    if (widget.isProduct ?? false) {
                       Get.to(EditProductPage(
                         productModel: widget.productModel,
                       ));
@@ -269,7 +267,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 'Deleted Successfully',
                                 '',
                                 colorText: Colors.white,
-                                backgroundColor: customThemeColor.withOpacity(0.7),
+                                backgroundColor:
+                                    customThemeColor.withOpacity(0.7),
                                 snackPosition: SnackPosition.BOTTOM,
                                 margin: const EdgeInsets.all(15),
                               );

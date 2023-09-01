@@ -16,7 +16,6 @@ class ImageViewScreen extends StatefulWidget {
 class _ImageViewScreenState extends State<ImageViewScreen> {
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 

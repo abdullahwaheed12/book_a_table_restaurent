@@ -34,7 +34,6 @@ class _HomePageState extends State<HomePage>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     tabController = TabController(length: 3, vsync: this);
     Get.find<HomeLogic>().updateToken();

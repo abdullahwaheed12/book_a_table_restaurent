@@ -29,7 +29,6 @@ class _AddProductPageState extends State<AddProductPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Get.find<GeneralController>().updateFormLoader(false);

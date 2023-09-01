@@ -57,8 +57,8 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                         color: customThemeColor.withOpacity(0.19),
                         blurRadius: 40,
                         spreadRadius: 0,
-                        offset: const Offset(
-                            0, 22), // changes position of shadow
+                        offset:
+                            const Offset(0, 22), // changes position of shadow
                       ),
                     ],
                     color: Colors.white,
@@ -72,7 +72,8 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                           Expanded(
                               child: InkWell(
                             onTap: () {
-                              launch('http://www.bookatable.in/privacy-policy');
+                              launchUrl(Uri.parse(
+                                  'http://www.bookatable.in/privacy-policy'));
                             },
                             child: Column(
                               children: [
@@ -87,7 +88,8 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                           Expanded(
                               child: InkWell(
                             onTap: () {
-                              launch('http://www.bookatable.in/terms');
+                              launchUrl(
+                                  Uri.parse('http://www.bookatable.in/terms'));
                             },
                             child: Column(
                               children: [
@@ -109,7 +111,8 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                           Expanded(
                               child: InkWell(
                             onTap: () {
-                              launch('http://www.bookatable.in/privacy-policy');
+                              launchUrl(Uri.parse(
+                                  'http://www.bookatable.in/privacy-policy'));
                             },
                             child: Column(
                               children: [

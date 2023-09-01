@@ -44,7 +44,6 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getNetPrice();
   }

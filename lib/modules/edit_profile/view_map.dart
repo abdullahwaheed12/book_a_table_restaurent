@@ -29,14 +29,12 @@ class _MapEditViewState extends State<MapEditView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Get.find<EditProfileLogic>().controller = Completer();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 

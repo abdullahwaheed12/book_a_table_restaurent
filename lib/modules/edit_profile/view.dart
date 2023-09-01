@@ -31,7 +31,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
   final GlobalKey<FormState> _editProfileFormKey = GlobalKey<FormState>();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Get.find<EditProfileLogic>().requestLocationPermission(context);
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {

@@ -37,7 +37,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Get.find<SignUpLogic>().requestLocationPermission(context);
   }

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,15 +11,14 @@ import 'modules/login/view.dart';
 import 'modules/order_detail/view.dart';
 import 'modules/profile/view.dart';
 import 'modules/sign_up/view.dart';
-import 'modules/sign_up/view_phone_login.dart';
+// import 'modules/sign_up/view_phone_login.dart';
 import 'modules/splash/view.dart';
 import 'modules/useful_links/view.dart';
-
 
 routes() => [
       GetPage(name: "/splash", page: () => const SplashPage()),
       GetPage(name: "/login", page: () => const LoginPage()),
-      GetPage(name: "/phoneLogin", page: () => const PhoneLoginView()),
+      // GetPage(name: "/phoneLogin", page: () => const PhoneLoginView()),
       GetPage(name: "/signUp", page: () => const SignUpPage()),
       GetPage(name: "/home", page: () => const HomePage()),
       GetPage(name: "/addProduct", page: () => const AddProductPage()),
@@ -45,7 +43,7 @@ class PageRoutes {
   static const String allOrders = '/allOrders';
   static const String profile = '/profile';
   // static const String help = '/help';
-  static const String forgetPassword = '/forgetPassword'; 
+  static const String forgetPassword = '/forgetPassword';
   static const String privacyPolicy = '/privacyPolicy';
 
   Map<String, WidgetBuilder> routes() {

@@ -92,7 +92,6 @@ class FirebaseAuthentication {
           'phone': Get.find<SignUpLogic>().phoneNumber,
           'email': Get.find<SignUpLogic>().emailController.text,
           'address': Get.find<SignUpLogic>().addressController.text,
-      
           'lng': Get.find<SignUpLogic>().longitudeString,
           'lat': Get.find<SignUpLogic>().latitudeString,
           'website_address':
@@ -114,10 +113,10 @@ class FirebaseAuthentication {
               setSearchParam(Get.find<SignUpLogic>().nameController.text),
           'id': Get.find<SignUpLogic>().getRandomString(5),
           'uid_id': user.user!.uid,
-          'isAC':Get.find<SignUpLogic>().isAC,
-          'isWifi':Get.find<SignUpLogic>().isWifi,
-          'isTV':Get.find<SignUpLogic>().isTV,
-          'isplay':Get.find<SignUpLogic>().isPlay,
+          'isAC': Get.find<SignUpLogic>().isAC,
+          'isWifi': Get.find<SignUpLogic>().isWifi,
+          'isTV': Get.find<SignUpLogic>().isTV,
+          'isplay': Get.find<SignUpLogic>().isPlay,
         });
       });
       Get.find<GeneralController>().updateFormLoader(false);
@@ -141,7 +140,6 @@ class FirebaseAuthentication {
   }
 
   setSearchParam(String caseNumber) {
-    List<String> caseSearchList = [];
     String temp = "";
     for (int i = 0; i < caseNumber.length; i++) {
       temp = temp + caseNumber[i];
@@ -156,6 +154,5 @@ class FirebaseAuthentication {
     Get.find<GeneralController>().boxStorage.remove('uid');
     Get.offAllNamed(PageRoutes.login);
     Get.find<GeneralController>().updateFormLoader(false);
-    
   }
 }

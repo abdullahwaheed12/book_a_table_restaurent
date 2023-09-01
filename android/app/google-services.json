@@ -1,45 +1,45 @@
 {
   "project_info": {
-    "project_number": "613334440308",
-    "project_id": "book-a-table-ef785",
-    "storage_bucket": "book-a-table-ef785.appspot.com"
+    "project_number": "625251647889",
+    "project_id": "book-a-table-c928a",
+    "storage_bucket": "book-a-table-c928a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:613334440308:android:fa9ae63f71c7c24760f421",
+        "mobilesdk_app_id": "1:625251647889:android:f60bad48ec882994a21a30",
         "android_client_info": {
           "package_name": "com.example.book_a_table"
         }
       },
       "oauth_client": [
         {
-          "client_id": "613334440308-ijas3s1s2jvhp4gpi31r37k03dvhngrm.apps.googleusercontent.com",
+          "client_id": "625251647889-g8v4q9i8vpbiepedc1h8panub08hbbn2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.book_a_table",
-            "certificate_hash": "44311c4702124f10373a442868403a97362fd7d6"
+            "certificate_hash": "8693868630e9202b5c7c9ba7d0d226dea6d5e9ae"
           }
         },
         {
-          "client_id": "613334440308-qdq5tr7793s787gajjvgvjabr1kkgk33.apps.googleusercontent.com",
+          "client_id": "625251647889-19lqtvti7g7sg0qo8ftcv10is3487sa0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCGHv5hR4EPiTE5aW6YcUGoDoN2cglRPR8"
+          "current_key": "AIzaSyBL_lf3xAla57Mh5dO-mpfuVsWikWTPFTc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "613334440308-qdq5tr7793s787gajjvgvjabr1kkgk33.apps.googleusercontent.com",
+              "client_id": "625251647889-19lqtvti7g7sg0qo8ftcv10is3487sa0.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "613334440308-jgsmbuu5uvdrmi6ls2a0b1d958pii34c.apps.googleusercontent.com",
+              "client_id": "625251647889-ee91r8t95poc1a5f8bali7h5l8gqfm2s.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.bookATable"
@@ -51,31 +51,31 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:613334440308:android:364bc982c0a1166b60f421",
+        "mobilesdk_app_id": "1:625251647889:android:2ec85c1b5a0c3415a21a30",
         "android_client_info": {
           "package_name": "com.example.book_a_table_restaurent"
         }
       },
       "oauth_client": [
         {
-          "client_id": "613334440308-qdq5tr7793s787gajjvgvjabr1kkgk33.apps.googleusercontent.com",
+          "client_id": "625251647889-19lqtvti7g7sg0qo8ftcv10is3487sa0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCGHv5hR4EPiTE5aW6YcUGoDoN2cglRPR8"
+          "current_key": "AIzaSyBL_lf3xAla57Mh5dO-mpfuVsWikWTPFTc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "613334440308-qdq5tr7793s787gajjvgvjabr1kkgk33.apps.googleusercontent.com",
+              "client_id": "625251647889-19lqtvti7g7sg0qo8ftcv10is3487sa0.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "613334440308-jgsmbuu5uvdrmi6ls2a0b1d958pii34c.apps.googleusercontent.com",
+              "client_id": "625251647889-ee91r8t95poc1a5f8bali7h5l8gqfm2s.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.bookATable"

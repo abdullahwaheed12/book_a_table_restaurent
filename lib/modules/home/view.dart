@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:animation_wrappers/animations/faded_slide_animation.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,14 +10,12 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:intl/intl.dart';
-import '../../controller/fcm_controller.dart';
 import '../../controller/general_controller.dart';
 import '../../route_generator.dart';
 import '../../utils/colors.dart';
 import '../../widgets/custom_drawer.dart';
 import '../order_detail/view.dart';
 import '../product_detail/view.dart';
-import '../table_detail/view.dart';
 import 'logic.dart';
 import 'state.dart';
 
@@ -580,7 +577,7 @@ class _HomePageState extends State<HomePage>
                                           child: CircularProgressIndicator());
                                     }
                                   }),
-                             
+
                             if (_homeLogic.tabIndex == 1)
 
                               ///---product-list
@@ -925,202 +922,201 @@ class _HomePageState extends State<HomePage>
                                                           ),
                                                           Align(
                                                             alignment: Alignment
-                                                            .centerLeft,
+                                                                .centerLeft,
                                                             child: Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .only(
-                                                                  left: 20),
-                                                          child: Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            children: [
-                                                            
-                                                              SizedBox(
-                                                                height: MediaQuery.of(context)
-                                                                        .size
-                                                                        .height *
-                                                                    .01,
-                                                              ),
-
-                                                              ///---Booking Time
-                                                              Row(
-                                                                children: [
-                                                                  Expanded(
-                                                                    child: Text(
-                                                                        'Booking Time',
-                                                                        softWrap:
-                                                                            true,
-                                                                        overflow:
-                                                                            TextOverflow.ellipsis,
-                                                                        style: state.nameTextStyle),
-                                                                  ),
-                                                                  const SizedBox(
-                                                                    width:
-                                                                        5,
-                                                                  ),
-                                                                  Expanded(
-                                                                    child:
-                                                                        Align(
-                                                                      alignment:
-                                                                          Alignment.centerRight,
-                                                                      child: Text(
-                                                                          DateFormat('dd-MM-yy').format(dt),
-                                                                          style: state.otpTextStyle),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                              SizedBox(
-                                                                height: MediaQuery.of(context)
-                                                                        .size
-                                                                        .height *
-                                                                    .01,
-                                                              ),
-
-                                                              ///---Booking Start
-                                                              Row(
-                                                                children: [
-                                                                  Expanded(
-                                                                    child: Text(
-                                                                        'Booking Start',
-                                                                        softWrap:
-                                                                            true,
-                                                                        overflow:
-                                                                            TextOverflow.ellipsis,
-                                                                        style: state.nameTextStyle),
-                                                                  ),
-                                                                  const SizedBox(
-                                                                    width:
-                                                                        5,
-                                                                  ),
-                                                                  Expanded(
-                                                                    child:
-                                                                        Align(
-                                                                      alignment:
-                                                                          Alignment.centerRight,
-                                                                      child: Text(
-                                                                          DateTime.fromMicrosecondsSinceEpoch(snapshot.data!.docs[index].get('bookingStart')).toString().substring(0, 16),
-                                                                          style: state.otpTextStyle),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                              SizedBox(
-                                                                height: MediaQuery.of(context)
-                                                                        .size
-                                                                        .height *
-                                                                    .01,
-                                                              ),
-
-                                                              ///---Booking End
-                                                              Row(
-                                                                children: [
-                                                                  Expanded(
-                                                                    child: Text(
-                                                                        'Booking End',
-                                                                        softWrap:
-                                                                            true,
-                                                                        overflow:
-                                                                            TextOverflow.ellipsis,
-                                                                        style: state.nameTextStyle),
-                                                                  ),
-                                                                  const SizedBox(
-                                                                    width:
-                                                                        5,
-                                                                  ),
-                                                                  Expanded(
-                                                                    child: Align(
-                                                                        alignment:
-                                                                            Alignment.centerRight,
-                                                                        child: Text(DateTime.fromMicrosecondsSinceEpoch(snapshot.data!.docs[index].get('bookingEnd')).toString().substring(0, 16), style: state.otpTextStyle)),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                              SizedBox(
-                                                                height: MediaQuery.of(context)
-                                                                        .size
-                                                                        .height *
-                                                                    .01,
-                                                              ),
-
-                                                              ///---status-relatedProduct
-                                                              Row(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      left: 20),
+                                                              child: Column(
                                                                 crossAxisAlignment:
                                                                     CrossAxisAlignment
+                                                                        .start,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
                                                                         .center,
                                                                 children: [
-                                                                  Expanded(
-                                                                    child:
-                                                                        Align(
-                                                                      alignment:
-                                                                          Alignment.center,
-                                                                      child:
-                                                                          Container(
-                                                                        decoration:
-                                                                            BoxDecoration(borderRadius: BorderRadius.circular(19), color: customThemeColor),
+                                                                  SizedBox(
+                                                                    height: MediaQuery.of(context)
+                                                                            .size
+                                                                            .height *
+                                                                        .01,
+                                                                  ),
+
+                                                                  ///---Booking Time
+                                                                  Row(
+                                                                    children: [
+                                                                      Expanded(
+                                                                        child: Text(
+                                                                            'Booking Time',
+                                                                            softWrap:
+                                                                                true,
+                                                                            overflow:
+                                                                                TextOverflow.ellipsis,
+                                                                            style: state.nameTextStyle),
+                                                                      ),
+                                                                      const SizedBox(
+                                                                        width:
+                                                                            5,
+                                                                      ),
+                                                                      Expanded(
                                                                         child:
-                                                                            Padding(
-                                                                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                                                                          child: snapshot.data!.docs[index].get('status') == 'Pending'
-                                                                              ? GestureDetector(
-                                                                                  onTap: () {
-                                                                                    snapshot.data!.docs[index].reference.update({
-                                                                                      'status': 'Booking Confirmed'
-                                                                                    });
-                                                                                    FirebaseFirestore.instance.collection('orders').doc(orderReference).get().then((value) {});
-                                                                                  },
-                                                                                  child: Center(
-                                                                                    child: Text('Accept Booking', style: state.priceTextStyle!.copyWith(color: Colors.white)),
-                                                                                  ),
-                                                                                )
-                                                                              : const Center(child: Text('Booking Confirmed')),
+                                                                            Align(
+                                                                          alignment:
+                                                                              Alignment.centerRight,
+                                                                          child: Text(
+                                                                              DateFormat('dd-MM-yy').format(dt),
+                                                                              style: state.otpTextStyle),
                                                                         ),
                                                                       ),
-                                                                    ),
+                                                                    ],
                                                                   ),
-                                                                  const SizedBox(
-                                                                    width:
-                                                                        5,
+                                                                  SizedBox(
+                                                                    height: MediaQuery.of(context)
+                                                                            .size
+                                                                            .height *
+                                                                        .01,
                                                                   ),
-                                                                  Expanded(
-                                                                    child:
-                                                                        Align(
-                                                                      alignment:
-                                                                          Alignment.center,
-                                                                      child:
-                                                                          Container(
-                                                                        decoration:
-                                                                            BoxDecoration(borderRadius: BorderRadius.circular(19), color: customThemeColor),
+
+                                                                  ///---Booking Start
+                                                                  Row(
+                                                                    children: [
+                                                                      Expanded(
+                                                                        child: Text(
+                                                                            'Booking Start',
+                                                                            softWrap:
+                                                                                true,
+                                                                            overflow:
+                                                                                TextOverflow.ellipsis,
+                                                                            style: state.nameTextStyle),
+                                                                      ),
+                                                                      const SizedBox(
+                                                                        width:
+                                                                            5,
+                                                                      ),
+                                                                      Expanded(
                                                                         child:
-                                                                            Padding(
-                                                                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                                                                          child: orderReference.isNotEmpty
-                                                                              ? GestureDetector(
-                                                                                  onTap: () {
-                                                                                    FirebaseFirestore.instance.collection('orders').doc(orderReference).get().then((value) {
-                                                                                      Get.to(OrderDetailPage(
-                                                                                        orderModel: value,
-                                                                                      ));
-                                                                                    });
-                                                                                  },
-                                                                                  child: Center(
-                                                                                    child: Text('Related Product', style: state.priceTextStyle!.copyWith(color: Colors.white)),
-                                                                                  ),
-                                                                                )
-                                                                              : const Center(child: Text('No Releted Products')),
+                                                                            Align(
+                                                                          alignment:
+                                                                              Alignment.centerRight,
+                                                                          child: Text(
+                                                                              DateTime.fromMicrosecondsSinceEpoch(snapshot.data!.docs[index].get('bookingStart')).toString().substring(0, 16),
+                                                                              style: state.otpTextStyle),
                                                                         ),
                                                                       ),
-                                                                    ),
+                                                                    ],
                                                                   ),
+                                                                  SizedBox(
+                                                                    height: MediaQuery.of(context)
+                                                                            .size
+                                                                            .height *
+                                                                        .01,
+                                                                  ),
+
+                                                                  ///---Booking End
+                                                                  Row(
+                                                                    children: [
+                                                                      Expanded(
+                                                                        child: Text(
+                                                                            'Booking End',
+                                                                            softWrap:
+                                                                                true,
+                                                                            overflow:
+                                                                                TextOverflow.ellipsis,
+                                                                            style: state.nameTextStyle),
+                                                                      ),
+                                                                      const SizedBox(
+                                                                        width:
+                                                                            5,
+                                                                      ),
+                                                                      Expanded(
+                                                                        child: Align(
+                                                                            alignment:
+                                                                                Alignment.centerRight,
+                                                                            child: Text(DateTime.fromMicrosecondsSinceEpoch(snapshot.data!.docs[index].get('bookingEnd')).toString().substring(0, 16), style: state.otpTextStyle)),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: MediaQuery.of(context)
+                                                                            .size
+                                                                            .height *
+                                                                        .01,
+                                                                  ),
+
+                                                                  ///---status-relatedProduct
+                                                                  Row(
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .center,
+                                                                    children: [
+                                                                      Expanded(
+                                                                        child:
+                                                                            Align(
+                                                                          alignment:
+                                                                              Alignment.center,
+                                                                          child:
+                                                                              Container(
+                                                                            decoration:
+                                                                                BoxDecoration(borderRadius: BorderRadius.circular(19), color: customThemeColor),
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                                                              child: snapshot.data!.docs[index].get('status') == 'Pending'
+                                                                                  ? GestureDetector(
+                                                                                      onTap: () {
+                                                                                        snapshot.data!.docs[index].reference.update({
+                                                                                          'status': 'Booking Confirmed'
+                                                                                        });
+                                                                                        FirebaseFirestore.instance.collection('orders').doc(orderReference).get().then((value) {});
+                                                                                      },
+                                                                                      child: Center(
+                                                                                        child: Text('Accept Booking', style: state.priceTextStyle!.copyWith(color: Colors.white)),
+                                                                                      ),
+                                                                                    )
+                                                                                  : const Center(child: Text('Booking Confirmed')),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      const SizedBox(
+                                                                        width:
+                                                                            5,
+                                                                      ),
+                                                                      Expanded(
+                                                                        child:
+                                                                            Align(
+                                                                          alignment:
+                                                                              Alignment.center,
+                                                                          child:
+                                                                              Container(
+                                                                            decoration:
+                                                                                BoxDecoration(borderRadius: BorderRadius.circular(19), color: customThemeColor),
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                                                              child: orderReference.isNotEmpty
+                                                                                  ? GestureDetector(
+                                                                                      onTap: () {
+                                                                                        FirebaseFirestore.instance.collection('orders').doc(orderReference).get().then((value) {
+                                                                                          Get.to(OrderDetailPage(
+                                                                                            orderModel: value,
+                                                                                          ));
+                                                                                        });
+                                                                                      },
+                                                                                      child: Center(
+                                                                                        child: Text('Related Product', style: state.priceTextStyle!.copyWith(color: Colors.white)),
+                                                                                      ),
+                                                                                    )
+                                                                                  : const Center(child: Text('No Releted Products')),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  )
                                                                 ],
-                                                              )
-                                                            ],
-                                                          ),
+                                                              ),
                                                             ),
                                                           )
                                                         ],

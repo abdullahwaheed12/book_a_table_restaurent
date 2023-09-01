@@ -101,7 +101,7 @@ class AddProductLogic extends GetxController {
         'couponStatus': false,
         'couponCode': '',
         'couponValue': 0,
-        'couponType':'',
+        'couponType': '',
       });
       Get.find<GeneralController>().updateFormLoader(false);
 
@@ -112,8 +112,7 @@ class AddProductLogic extends GetxController {
           .get();
       for (var element in fcmTokenQuery.docs) {
         try {
-        fcmTokenList.add(element.get('token'));
-          
+          fcmTokenList.add(element.get('token'));
         } catch (e) {
           print('exception in get token');
         }
@@ -124,7 +123,8 @@ class AddProductLogic extends GetxController {
             fcmService,
             {
               'notification': <String, dynamic>{
-                'body': '${Get.find<HomeLogic>().currentRestaurantData!.get('id')} :  ${Get.find<HomeLogic>().currentRestaurantData!.get('name')} just uploaded new items, check them out before they are gone.',
+                'body':
+                    '${Get.find<HomeLogic>().currentRestaurantData!.get('id')} :  ${Get.find<HomeLogic>().currentRestaurantData!.get('name')} just uploaded new items, check them out before they are gone.',
                 'title': 'PRODUCT ALERT !!',
                 "click_action": "FLUTTER_NOTIFICATION_CLICK",
               },
@@ -159,7 +159,6 @@ class AddProductLogic extends GetxController {
   }
 
   setSearchParam(String caseNumber) {
-    List<String> caseSearchList = [];
     String temp = "";
     for (int i = 0; i < caseNumber.length; i++) {
       temp = temp + caseNumber[i];

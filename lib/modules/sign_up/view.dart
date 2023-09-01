@@ -12,7 +12,6 @@ import 'package:image_picker_gallery_camera/image_picker_gallery_camera.dart';
 import 'package:intl/intl.dart' as intl;
 
 import '../../controller/general_controller.dart';
-import '../../route_generator.dart';
 import '../../utils/colors.dart';
 import '../../widgets/custom_dialog.dart';
 
@@ -111,61 +110,67 @@ class _SignUpPageState extends State<SignUpPage> {
                                 bottom: 0,
                                 child: Row(
                                   children: [
-                                if (_signUpLogic.isAC) Container(
-                                      height: 20,
-                                      width: 50,
-                                      padding: EdgeInsets.symmetric(horizontal: 10),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.greenColor,
-                                        borderRadius: BorderRadius.circular(20)
+                                    if (_signUpLogic.isAC)
+                                      Container(
+                                        height: 20,
+                                        width: 50,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 10),
+                                        decoration: BoxDecoration(
+                                            color: AppColors.greenColor,
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        alignment: Alignment.center,
+                                        child: Text('AC'),
                                       ),
-                                      alignment: Alignment.center,
-                                      child: Text('AC'),
-                                    ),
                                     SizedBox(
                                       width: 10,
                                     ),
-                                 if (_signUpLogic.isTV)    Container(
-                                      height: 20,
-                                      alignment: Alignment.center,
-                                      width: 50,
-                                      padding: EdgeInsets.symmetric(horizontal: 10),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.greenColor,
-                                        borderRadius: BorderRadius.circular(20)
+                                    if (_signUpLogic.isTV)
+                                      Container(
+                                        height: 20,
+                                        alignment: Alignment.center,
+                                        width: 50,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 10),
+                                        decoration: BoxDecoration(
+                                            color: AppColors.greenColor,
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: Text('TV'),
                                       ),
-                                      child: Text('TV'),
-                                    ),
                                     SizedBox(
                                       width: 10,
                                     ),
-                                  if (_signUpLogic.isWifi)   Container(
-                                      height: 20,
-                              
-                                      alignment: Alignment.center,
-                                       width: 50,
-                                      padding: EdgeInsets.symmetric(horizontal: 10),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.greenColor,
-                                        borderRadius: BorderRadius.circular(20)
+                                    if (_signUpLogic.isWifi)
+                                      Container(
+                                        height: 20,
+                                        alignment: Alignment.center,
+                                        width: 50,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 10),
+                                        decoration: BoxDecoration(
+                                            color: AppColors.greenColor,
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: Text('Wifi'),
                                       ),
-                                      child: Text('Wifi'),
-                                    ),
                                     SizedBox(
                                       width: 10,
                                     ),
-                                  if (_signUpLogic.isPlay)   Container(
-                                      height: 20,
-                                  
-                                      alignment: Alignment.center,
-                                       width: 100,
-                                      padding: EdgeInsets.symmetric(horizontal: 10),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.greenColor,
-                                        borderRadius: BorderRadius.circular(20)
+                                    if (_signUpLogic.isPlay)
+                                      Container(
+                                        height: 20,
+                                        alignment: Alignment.center,
+                                        width: 100,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 10),
+                                        decoration: BoxDecoration(
+                                            color: AppColors.greenColor,
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: Text('PlayStation'),
                                       ),
-                                      child: Text('PlayStation'),
-                                    ),
                                     SizedBox(
                                       width: 10,
                                     ),
@@ -601,8 +606,10 @@ class _SignUpPageState extends State<SignUpPage> {
                               _generalController.focusOut(context);
                               if (_signUpFormKey.currentState!.validate()) {
                                 if (_signUpLogic.restaurantImage != null) {
-                                  Get.toNamed(PageRoutes.phoneLogin);
-                                  // Get.find<GeneralController>().firebaseAuthentication.signUp();
+                                  // Get.toNamed(PageRoutes.phoneLogin);
+                                  Get.find<GeneralController>()
+                                      .firebaseAuthentication
+                                      .signUp();
                                 } else {
                                   showDialog(
                                       context: context,
@@ -711,7 +718,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     "Camera",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
               CupertinoDialogAction(
@@ -739,7 +746,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     "Gallery",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
             ],

@@ -9,7 +9,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:system_settings/system_settings.dart';
 
-
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart' as geo_locator;
 import 'package:get/get.dart';
@@ -37,10 +36,10 @@ class SignUpLogic extends GetxController {
   String? downloadURL;
   String? longitudeString;
   String? latitudeString;
-  bool isTV =false;
-  bool isAC=false;
-  bool isPlay=false;
-  bool isWifi=false;
+  bool isTV = false;
+  bool isAC = false;
+  bool isPlay = false;
+  bool isWifi = false;
   AnimationController? loginTimerAnimationController;
 
   bool? otpSendCheckerLogin = false;
@@ -109,6 +108,7 @@ class SignUpLogic extends GetxController {
       },
       codeAutoRetrievalTimeout: (String verificationId) {},
     );
+    return null;
   }
 
   verifyOTP(BuildContext context, var otp) async {
@@ -196,12 +196,12 @@ class SignUpLogic extends GetxController {
 
   requestLocationPermission(BuildContext context) async {
     if (Platform.isIOS) {
-      Map<Permission, PermissionStatus> statuses = await [
+      await [
         Permission.location,
         Permission.locationWhenInUse,
       ].request();
-      var status = await Permission.locationWhenInUse.request();
-      var granted = statuses;
+      await Permission.locationWhenInUse.request();
+
       ServiceStatus serviceStatus = await Permission.location.serviceStatus;
       bool enabled = (serviceStatus == ServiceStatus.enabled);
 
@@ -341,5 +341,4 @@ class SignUpLogic extends GetxController {
   }
 
   ///------------------------------------MAP-DATA----END-----------------
-
 }

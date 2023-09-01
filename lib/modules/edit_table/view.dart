@@ -31,7 +31,7 @@ class _EditTablePageState extends State<EditTablePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Get.find<GeneralController>().updateFormLoader(false);
     });
 
@@ -116,7 +116,7 @@ class _EditTablePageState extends State<EditTablePage> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * .02,
                         ),
-                       
+
                         ///---table name
                         Padding(
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -156,7 +156,6 @@ class _EditTablePageState extends State<EditTablePage> {
                         Padding(
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                           child: TextFormField(
-                            
                             controller:
                                 _editTableLogic.tableChairsCountController,
                             keyboardType: TextInputType.name,
@@ -185,7 +184,7 @@ class _EditTablePageState extends State<EditTablePage> {
                             },
                           ),
                         ),
-                       
+
                         SizedBox(
                           height: MediaQuery.of(context).size.height * .01,
                         ),
@@ -195,7 +194,6 @@ class _EditTablePageState extends State<EditTablePage> {
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                           child: TextFormField(
                             readOnly: true,
-                           
                             controller:
                                 _editTableLogic.tableReserveFromController,
                             keyboardType: TextInputType.name,
@@ -224,7 +222,7 @@ class _EditTablePageState extends State<EditTablePage> {
                             },
                           ),
                         ),
-                       
+
                         SizedBox(
                           height: MediaQuery.of(context).size.height * .01,
                         ),
@@ -256,14 +254,13 @@ class _EditTablePageState extends State<EditTablePage> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Field Required';
-                              } 
-                              else {
+                              } else {
                                 return null;
                               }
                             },
                           ),
                         ),
-                       
+
                         SizedBox(
                           height: MediaQuery.of(context).size.height * .01,
                         ),
@@ -400,7 +397,7 @@ class _EditTablePageState extends State<EditTablePage> {
                     "Camera",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
               CupertinoDialogAction(
@@ -428,7 +425,7 @@ class _EditTablePageState extends State<EditTablePage> {
                     "Gallery",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
             ],

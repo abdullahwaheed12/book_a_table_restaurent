@@ -1,9 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../controller/general_controller.dart';
-import '../../utils/colors.dart';
 import '../home/view.dart';
 import '../login/view.dart';
 import 'logic.dart';
@@ -41,7 +38,6 @@ class _SplashPageState extends State<SplashPage> {
             'assets/splashImage.png',
             width: MediaQuery.of(context).size.width * .7,
           ),
-         
         ],
       ),
     ));

@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 
@@ -6,11 +5,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
 import 'package:get/get.dart';
 import 'package:image_picker_gallery_camera/image_picker_gallery_camera.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:uuid/uuid.dart';
 import 'package:intl/intl.dart' as intl;
 
 import '../../controller/general_controller.dart';
@@ -37,7 +34,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     // TODO: implement initState
     super.initState();
     Get.find<EditProfileLogic>().requestLocationPermission(context);
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Get.find<GeneralController>().updateFormLoader(false);
     });
     logic.setData(widget.restaurantModel);
@@ -451,19 +448,17 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         imageQuality: 10,
                         maxWidth: 400,
                         maxHeight: 600));
-                    if (restaurantImagesList != null) {
-                      setState(() {
-                        Get.find<EditProfileLogic>().restaurantImage =
-                            File(restaurantImagesList[0].path);
-                      });
-                      log(restaurantImagesList[0].path);
-                    }
+                    setState(() {
+                      Get.find<EditProfileLogic>().restaurantImage =
+                          File(restaurantImagesList[0].path);
+                    });
+                    log(restaurantImagesList[0].path);
                   },
                   child: Text(
                     "Camera",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
               CupertinoDialogAction(
@@ -481,19 +476,17 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         imageQuality: 10,
                         maxWidth: 400,
                         maxHeight: 600));
-                    if (restaurantImagesList != null) {
-                      setState(() {
-                        Get.find<EditProfileLogic>().restaurantImage =
-                            File(restaurantImagesList[0].path);
-                      });
-                      log(restaurantImagesList[0].path);
-                    }
+                    setState(() {
+                      Get.find<EditProfileLogic>().restaurantImage =
+                          File(restaurantImagesList[0].path);
+                    });
+                    log(restaurantImagesList[0].path);
                   },
                   child: Text(
                     "Gallery",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
             ],

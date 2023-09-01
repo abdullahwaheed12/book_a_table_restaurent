@@ -12,6 +12,7 @@ import '../image_full_view/view.dart';
 import 'logic.dart';
 import 'state.dart';
 
+// ignore: must_be_immutable
 class OrderDetailPage extends StatefulWidget {
   OrderDetailPage({Key? key, this.orderModel}) : super(key: key);
   DocumentSnapshot? orderModel;
@@ -149,7 +150,8 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                           children: [
                             const Text('Customer Name',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontFamily: 'Poppins',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w800,
                                     color: customGreenColor)),
@@ -158,7 +160,8 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                                     .get('customerName')
                                     .toString(),
                                 textAlign: TextAlign.center,
-                                style: const TextStyle(fontFamily: 'Poppins',
+                                style: const TextStyle(
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w800,
                                     color: customTextGreyColor)),
@@ -172,17 +175,21 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                           children: [
                             const Text('isTakeAway? ',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontFamily: 'Poppins',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w800,
                                     color: customGreenColor)),
                             Text(
-                                widget.orderModel!.get('isTakeAway').toString() ==
+                                widget.orderModel!
+                                            .get('isTakeAway')
+                                            .toString() ==
                                         'true'
                                     ? 'Yes'
                                     : 'No',
                                 textAlign: TextAlign.center,
-                                style: const TextStyle(fontFamily: 'Poppins',
+                                style: const TextStyle(
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w800,
                                     color: customTextGreyColor)),
@@ -191,7 +198,6 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                         const SizedBox(
                           height: 8,
                         ),
-                      
                       ],
                     ),
                   ),
@@ -230,7 +236,6 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(19),
-                         
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(20.0),
@@ -533,9 +538,8 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                       ),
                     )
                   : const SizedBox(),
-              
 
- widget.orderModel!.get('status') == 'Accepted'
+              widget.orderModel!.get('status') == 'Accepted'
                   ? InkWell(
                       onTap: () async {
                         FirebaseFirestore.instance
@@ -581,8 +585,7 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                     )
                   : const SizedBox(),
 
-
-               widget.orderModel!.get('status') == 'Preparing Order'
+              widget.orderModel!.get('status') == 'Preparing Order'
                   ? InkWell(
                       onTap: () async {
                         FirebaseFirestore.instance
@@ -627,7 +630,6 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                       ),
                     )
                   : const SizedBox(),
-              
 
               widget.orderModel!.get('status') == 'Order Ready'
                   ? InkWell(
@@ -723,7 +725,8 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                                   Text(
                                     'Enter Order OTP',
                                     textAlign: TextAlign.start,
-                                    style: TextStyle(fontFamily: 'Poppins',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w800,
                                         fontSize: 20,
                                         color: customTextGreyColor),
@@ -744,8 +747,9 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                             autofocus: true,
                             decoration: InputDecoration(
                                 labelText: 'Order OTP',
-                                labelStyle:
-                                    const TextStyle(fontFamily: 'Poppins',color: customThemeColor),
+                                labelStyle: const TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: customThemeColor),
                                 border: const UnderlineInputBorder(
                                     borderSide:
                                         BorderSide(color: customTextGreyColor)),

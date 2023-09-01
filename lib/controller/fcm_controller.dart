@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'general_controller.dart';
 
 sendNotificationCall(String token, String? title, String body) async {
-  http.Response response = await http.post(
+  await http.post(
     Uri.parse('https://fcm.googleapis.com/fcm/send'),
     headers: <String, String>{
       'Content-Type': 'application/json',
@@ -15,7 +15,11 @@ sendNotificationCall(String token, String? title, String body) async {
     },
     body: jsonEncode(
       <String, dynamic>{
-        'notification': <String, dynamic>{'body': ' ${Get.find<GeneralController>().boxStorage.read('uid')}: $body', 'title': title},
+        'notification': <String, dynamic>{
+          'body':
+              ' ${Get.find<GeneralController>().boxStorage.read('uid')}: $body',
+          'title': title
+        },
         'priority': 'high',
         'data': <String, dynamic>{
           'click_action': 'FLUTTER_NOTIFICATION_CLICK',

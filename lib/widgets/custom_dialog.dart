@@ -1,8 +1,5 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CustomDialogBox extends StatefulWidget {
   final String? title, descriptions, text;
@@ -62,7 +59,8 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                   ? const SizedBox()
                   : Text(
                       widget.title!,
-                      style: TextStyle(fontFamily: 'Poppins',
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
                           fontSize: 23,
                           fontWeight: FontWeight.bold,
                           color: widget.titleColor),
@@ -74,8 +72,10 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                     ),
               Text(
                 widget.descriptions!,
-                style: const TextStyle(fontFamily: 'Poppins',
-                    fontSize: 14, color: Color(0xff3E3E3E)),
+                style: const TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                    color: Color(0xff3E3E3E)),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
@@ -94,7 +94,8 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                       child: Center(
                         child: Text(
                           widget.text!,
-                          style: const TextStyle(fontFamily: 'Poppins',
+                          style: const TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 16,
                               color: Colors.white,
                               fontWeight: FontWeight.w500),

@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:uuid/uuid.dart';
 import 'dart:convert';
 
-
 import '../../utils/colors.dart';
 import 'places_services.dart';
 
@@ -21,7 +20,6 @@ class PlacesAutoComplete extends StatefulWidget {
 
 class _PlacesAutoCompleteState extends State<PlacesAutoComplete> {
   final _controller = TextEditingController();
-  final String _streetNumber = '';
 
   @override
   void dispose() {
@@ -65,27 +63,25 @@ class _PlacesAutoCompleteState extends State<PlacesAutoComplete> {
 
                 log('RESULT---->>>${result!.description.toString().split(', ')[2]}');
                 // This will change the text displayed in the TextField
-                if (result != null) {
-                  final placeDetails = await PlaceApiProvider(sessionToken)
-                      .getPlaceDetailFromId(result.placeId);
+                final placeDetails = await PlaceApiProvider(sessionToken)
+                    .getPlaceDetailFromId(result.placeId);
 
-                  await saveData(
-                      latLong: json.encode({
-                        'lat': placeDetails['lat'],
-                        'lng': placeDetails['lng']
-                      }),
-                      place: result.description);
+                await saveData(
+                    latLong: json.encode({
+                      'lat': placeDetails['lat'],
+                      'lng': placeDetails['lng']
+                    }),
+                    place: result.description);
 
-                  // latlong.value =
-                  //     await json.decode(await datastore.read("latlong"));
-                  // print("the lat long is ${latlong.value}");
-                  // print(latlong.value['lat']);
+                // latlong.value =
+                //     await json.decode(await datastore.read("latlong"));
+                // print("the lat long is ${latlong.value}");
+                // print(latlong.value['lat']);
 
-                  setState(() {
-                    // datastore.write("placename", result.description);
-                    // datastore.write("latlong", json.encode(placeDetails));
-                  });
-                }
+                setState(() {
+                  // datastore.write("placename", result.description);
+                  // datastore.write("latlong", json.encode(placeDetails));
+                });
               },
               decoration: const InputDecoration(
                 icon: SizedBox(

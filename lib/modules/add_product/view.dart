@@ -1,11 +1,9 @@
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker_gallery_camera/image_picker_gallery_camera.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:multiselect/multiselect.dart';
@@ -33,7 +31,7 @@ class _AddProductPageState extends State<AddProductPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Get.find<GeneralController>().updateFormLoader(false);
     });
     logic.fetchCategories();
@@ -139,7 +137,6 @@ class _AddProductPageState extends State<AddProductPage> {
                           ),
                         ),
 
-                    
                         SizedBox(
                           height: MediaQuery.of(context).size.height * .0,
                         ),
@@ -532,19 +529,17 @@ class _AddProductPageState extends State<AddProductPage> {
                         imageQuality: 10,
                         maxWidth: 400,
                         maxHeight: 600));
-                    if (productImagesList != null) {
-                      setState(() {
-                        Get.find<AddProductLogic>().productImage =
-                            File(productImagesList[0].path);
-                      });
-                      log(productImagesList[0].path);
-                    }
+                    setState(() {
+                      Get.find<AddProductLogic>().productImage =
+                          File(productImagesList[0].path);
+                    });
+                    log(productImagesList[0].path);
                   },
                   child: Text(
                     "Camera",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
               CupertinoDialogAction(
@@ -562,19 +557,17 @@ class _AddProductPageState extends State<AddProductPage> {
                         imageQuality: 10,
                         maxWidth: 400,
                         maxHeight: 600));
-                    if (productImagesList != null) {
-                      setState(() {
-                        Get.find<AddProductLogic>().productImage =
-                            File(productImagesList[0].path);
-                      });
-                      log(productImagesList[0].path);
-                    }
+                    setState(() {
+                      Get.find<AddProductLogic>().productImage =
+                          File(productImagesList[0].path);
+                    });
+                    log(productImagesList[0].path);
                   },
                   child: Text(
                     "Gallery",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
             ],

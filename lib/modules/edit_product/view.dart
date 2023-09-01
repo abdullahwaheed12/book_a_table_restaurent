@@ -31,7 +31,7 @@ class _EditProductPageState extends State<EditProductPage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Get.find<GeneralController>().updateFormLoader(false);
     });
 
@@ -227,8 +227,8 @@ class _EditProductPageState extends State<EditProductPage> {
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                           child: TextFormField(
                             onChanged: (String? newValue) {
-                              if (_editProductLogic.originalPriceController.text
-                                      .isNotEmpty ) {
+                              if (_editProductLogic
+                                  .originalPriceController.text.isNotEmpty) {
                                 setState(() {
                                   _editProductLogic.discountValueController
                                       .text = double.parse((((double.parse(
@@ -356,7 +356,6 @@ class _EditProductPageState extends State<EditProductPage> {
 
                         ///---product-discount-field
                         Padding(
-                          
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                           child: TextFormField(
                             readOnly: true,
@@ -382,7 +381,7 @@ class _EditProductPageState extends State<EditProductPage> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Field Required';
-                              }  else {
+                              } else {
                                 return null;
                               }
                             },
@@ -391,6 +390,7 @@ class _EditProductPageState extends State<EditProductPage> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * .01,
                         ),
+
                         ///---Chef-Note-Field
                         Padding(
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -523,7 +523,7 @@ class _EditProductPageState extends State<EditProductPage> {
                     "Camera",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
               CupertinoDialogAction(
@@ -551,7 +551,7 @@ class _EditProductPageState extends State<EditProductPage> {
                     "Gallery",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(fontSize: 18),
                   )),
             ],

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>625251647889-0q391g01vbkvu6peulqua1uv7bc255a9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.625251647889-0q391g01vbkvu6peulqua1uv7bc255a9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>625251647889-g8v4q9i8vpbiepedc1h8panub08hbbn2.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDK2Dw5jVebVq065uxHUYiWY3_sGWgNBZ8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>625251647889</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.bookATableRestaurent</string>
+	<key>PROJECT_ID</key>
+	<string>book-a-table-c928a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>book-a-table-c928a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:625251647889:ios:ec30e422b8c110b4a21a30</string>
+</dict>
+</plist>

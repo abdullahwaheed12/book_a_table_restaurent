@@ -50,21 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBL_lf3xAla57Mh5dO-mpfuVsWikWTPFTc',
-    appId: '1:625251647889:android:2ec85c1b5a0c3415a21a30',
-    messagingSenderId: '625251647889',
-    projectId: 'book-a-table-c928a',
-    storageBucket: 'book-a-table-c928a.appspot.com',
+    apiKey: 'AIzaSyAb5tIUePh5aFru5U8RtoKTa6m58XcF50Q',
+    appId: '1:375545822337:android:08ff52f6cd19658da6a180',
+    messagingSenderId: '375545822337',
+    projectId: 'book-a-table-4bc3d',
+    storageBucket: 'book-a-table-4bc3d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDK2Dw5jVebVq065uxHUYiWY3_sGWgNBZ8',
-    appId: '1:625251647889:ios:ec30e422b8c110b4a21a30',
-    messagingSenderId: '625251647889',
-    projectId: 'book-a-table-c928a',
-    storageBucket: 'book-a-table-c928a.appspot.com',
-    androidClientId: '625251647889-g8v4q9i8vpbiepedc1h8panub08hbbn2.apps.googleusercontent.com',
-    iosClientId: '625251647889-0q391g01vbkvu6peulqua1uv7bc255a9.apps.googleusercontent.com',
+    apiKey: 'AIzaSyB4n9MQbdFIzn7qG7ZZJEQi8H10wLCX0xE',
+    appId: '1:375545822337:ios:16037fc131a8fe64a6a180',
+    messagingSenderId: '375545822337',
+    projectId: 'book-a-table-4bc3d',
+    storageBucket: 'book-a-table-4bc3d.appspot.com',
+    iosClientId: '375545822337-ngnvmnomrsnhda02u7t6kd59ot2d2lk4.apps.googleusercontent.com',
     iosBundleId: 'com.example.bookATableRestaurent',
   );
 }

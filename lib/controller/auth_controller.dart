@@ -65,7 +65,7 @@ class FirebaseAuthentication {
   }
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  Future<bool> signUp() async {
+  Future<bool> signUp(BuildContext context) async {
     try {
       Get.find<SignUpLogic>().nameController.text = Get.find<SignUpLogic>()
           .nameController
@@ -119,6 +119,8 @@ class FirebaseAuthentication {
           'isplay': Get.find<SignUpLogic>().isPlay,
         });
       });
+      Get.find<SignUpLogic>()
+          .uploadFile(Get.find<SignUpLogic>().restaurantImage, context);
       Get.find<GeneralController>().updateFormLoader(false);
       Get.find<GeneralController>().boxStorage.write('session', 'active');
 

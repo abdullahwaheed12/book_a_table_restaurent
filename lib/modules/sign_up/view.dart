@@ -38,6 +38,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   void initState() {
     super.initState();
+
     Get.find<SignUpLogic>().requestLocationPermission(context);
   }
 
@@ -607,8 +608,12 @@ class _SignUpPageState extends State<SignUpPage> {
                                 if (_signUpLogic.restaurantImage != null) {
                                   // Get.toNamed(PageRoutes.phoneLogin);
                                   Get.find<GeneralController>()
+                                      .updateFormLoader(true);
+                                  await Get.find<GeneralController>()
                                       .firebaseAuthentication
-                                      .signUp();
+                                      .signUp(context);
+                                  Get.find<GeneralController>()
+                                      .updateFormLoader(false);
                                 } else {
                                   showDialog(
                                       context: context,

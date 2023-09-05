@@ -71,9 +71,7 @@ class SignUpLogic extends GetxController {
 
     downloadURL = await (await uploadTask).ref.getDownloadURL();
     log('URL---->>$downloadURL');
-    if (!await Get.find<GeneralController>().firebaseAuthentication.signUp()) {
-      return null;
-    }
+
     return Future.value(uploadTask);
   }
 
